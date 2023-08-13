@@ -1,0 +1,200 @@
+@font-face 
+{
+    font-family: "Netflix-Sans-Regular";
+    src: url("fonts/NetflixSans-Regular.woff2") format("woff");
+}
+
+@font-face 
+{
+    font-family: "Netflix-Sans-Black";
+    src: url("fonts/NetflixSansBlack.ttf");
+}
+
+:root
+{
+    --primary-color: #278477;
+    --background-color: white;
+    --text-color: black;
+    --light-text-color: #a5a5a5;
+    --body-background-color: #eeeeee;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Netflix-Sans-Regular";
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+}
+
+.container
+{
+    width: 400px;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #5aa69a;
+    background-color: var(--background-color);
+}
+
+.container h1
+{
+    font-family: "Netflix-Sans-Black";
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.container .heading
+{
+    color: #5aa69a;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container .options select
+{
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 2px;
+    border: 1px solid #5aa69a;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container .options p
+{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--light-text-color);
+}
+
+.container .line
+{
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-text-color);
+    opacity: .5;
+    margin: 30px 0;
+}
+
+.btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.btn:hover
+{
+    background-color: #5aa69a;
+}
+
+.btn ion-icon
+{
+    font-size: 20px;
+}
+
+.btn:disabled
+{
+    cursor: not-allowed;
+    background-color: var(--light-text-color);
+}
+
+.btn.record img
+{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.record.recording img
+{
+    display: block;
+}
+
+.record.recording ion-icon
+{
+    display: none;
+}
+
+.container .result
+{
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid #5aa69a;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.container .result p
+{
+    display: inline;
+    margin-left: 3px;
+    color: var(--light-text-color);
+}
+
+.buttons
+{
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 300px)
+{
+    .container .heading
+    {
+        font-size: 20px;
+    }
+    .container .line
+    {
+        margin: 20px 0;
+    }
+    .btn
+    {
+        font-size: 12px;
+        gap: 5px;
+        height: 30px;
+    }
+    .btn ion-icon
+    {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 250px)
+{
+    .buttons
+    {
+        display: block;
+    }
+}
